@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+
+<meta charset="utf-8" />
+
+<title>
+  Interface
+</title>
+<!--     Fonts and icons     -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+<!-- CSS Files -->
+<link id="pagestyle" href="{% static 'css/soft-design-system.css' %}" rel="stylesheet" />
+</head>
+<style>
+  body {
+    padding-top:5px;
+  }
+</style>
+<body {% block body %}{% endblock body %} >
+
+  {% block header %}
+  <div style=margin-bottom:100px;">
+
+    {% include 'includes/sidebar.html' %}
+  </div>
+
+  {% endblock header %}
+
+  <div class="mx-lg-5 mx-md-3 mx-sm-1 px-lg-5 px-md-3 px-sm-0">
+
+    {% block content %}{% endblock content %}
+  </div>
+
+
+</body>
+</html>
